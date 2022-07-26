@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan calculator</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Loan calculator</h1>
+      <main class="calculator">
+        <section class="calculator__section">
+          <div class="input-group input-group--slider">
+            <label for="loan-amount">Loan amount</label>
+            <input
+              type="text"
+              id="loan-amount"
+              min="0"
+              maxlength="7"
+              autofocus
+            />
+            <label for="slider"></label>
+            <input
+              type="range"
+              id="slider"
+              min="0"
+              max="5000000"
+              step="5000"
+              value="0"
+            />
+          </div>
+          <div class="loan-details">
+            <div class="input-group">
+              <label for="loan-term">Loan term, months</label>
+              <input type="text" id="loan-term" value="12" maxlength="3" />
+            </div>
+            <div class="input-group">
+              <label for="rate">Interest rate, %</label>
+              <input type="text" id="rate" value="10" maxlength="3" />
+            </div>
+          </div>
+        </section>
+        <section class="calculator__section">
+          <div class="output-group output-group--monthly">
+            <p class="output-description">Monthly payment</p>
+            <p id="monthly-payment" class="output-number">0</p>
+          </div>
+          <hr />
+          <div class="output-group">
+            <p class="output-description">Total payment</p>
+            <p id="total-payment" class="output-number">0</p>
+          </div>
+          <div class="output-group">
+            <p class="output-description">Total interest</p>
+            <p id="total-interest" class="output-number">0</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
