@@ -1,6 +1,6 @@
 # Loan calculator App
 
-Loan calculator with real-time results update
+Loan calculator with real-time results update.
 
 # Live demo
 
